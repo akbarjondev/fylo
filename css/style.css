@@ -1,8 +1,10 @@
 /*styles*/
 :root {
+	--footer-bg-color: #0b1524;
 	--main-key: #1b2330;
 	--main-white: #ffffff;
 	--main-blue: #62e0d9;
+	--main-light-key: #202a3c;
 }
 .body {
 	margin: 0;
@@ -21,20 +23,34 @@
 	margin: auto;
 	padding: 0 20px;
 }
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
 
 /*===mobile styles===*/
 
 /*general styles*/
 .main-button {
 	display: inline-block;
+	min-width: 240px;
 	margin: 0 auto;
-	padding: 16px 81px;
+	padding: 16px 32px;
 	color: var(--main-white);
+	text-align: center;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 700;
 	border-radius: 24px;
 	border: none;
+	text-transform: capitalize;
+	background-color: #34A0CD;
 	background-image: linear-gradient(152.13deg, #63E1D9 -150.21%, #34A0CD 170.03%);
 }
 h1, h2, h3, h4 {
@@ -75,6 +91,7 @@ h1, h2, h3, h4 {
 .hero {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin-bottom: 120px;
 	color: var(--main-white);
 }
@@ -151,6 +168,7 @@ h1, h2, h3, h4 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 160px;
 	color: var(--main-white);
 }
 .productive-heading {
@@ -183,15 +201,118 @@ h1, h2, h3, h4 {
 }
 .productive-link:after {
 	content: "";
-	width: 12px;
-	height: 12px;
+	width: 14px;
+	height: 14px;
 	margin-left: 7px;
 	border-radius: 50%;
 	background-image: 
 	  url("../img/arrow-forward.svg"), 
 	  linear-gradient(to right, var(--main-blue), var(--main-blue));
 	background-repeat: no-repeat;
-	background-position: center, center;
+	background-position: left 1px center, center;
 	-webkit-background-size: contain;
 	background-size: contain;
+	box-shadow: 0px 0px 2px rgba(98, 224, 217, 0.8);
+}
+
+/*quotes*/
+.quotes {
+	padding: 0 28px;
+	margin-bottom: 160px;
+	color: var(--main-white);
+}
+.quotes-list {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.quotes-list::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	width: 32px;
+	height: 9px;
+	background-image: url("../img/quote-sign.svg");
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-position: center;
+}
+.quotes-item {
+	padding: 24px 20px;
+	margin-bottom: 24px;
+	border-radius: 4px;
+	background-color: var(--main-light-key);
+}
+.quotes-text {
+	display: block;
+	margin-bottom: 17px;
+	font-size: 10px;
+	line-height: 18px;
+}
+.quotes-author {
+	display: flex;
+	align-items: center;
+}
+.quotes-img {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+}
+.quotes-wrapper {
+	margin-left: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.quotes-name {
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: 700;
+}
+.quotes-company {
+	font-size: 7px;
+	line-height: 10px;
+}
+
+/*subscription*/
+.subscription {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 28px;
+	text-align: center;
+	color: var(--main-white);
+	background-color: var(--main-light-key);
+	border-radius: 9px;
+}
+.subscription-heading {
+	margin: 0;
+	margin-bottom: 16px;
+}
+.subscription-text {
+	margin: 0;
+	margin-bottom: 32px;
+}
+.subscription-input {
+	padding: 10px 29px;
+	border: none;
+	background-color: var(--main-white);
+	border-radius: 24px;
+}
+.input-wrapper {
+	margin-bottom: 24px;
+}
+.subscription-input::placeholder {
+	font-size: 10px;
+	line-height: 25px;
+}
+.subscription-button {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
 }
