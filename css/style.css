@@ -278,6 +278,10 @@ h1, h2, h3, h4 {
 }
 
 /*subscription*/
+.section-wrapper {
+	background-image: linear-gradient(to bottom, var(--main-key) 200px, var(--footer-bg-color) 200px);
+
+}
 .subscription {
 	display: flex;
 	flex-direction: column;
@@ -287,6 +291,7 @@ h1, h2, h3, h4 {
 	color: var(--main-white);
 	background-color: var(--main-light-key);
 	border-radius: 9px;
+	box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
 }
 .subscription-heading {
 	margin: 0;
@@ -295,6 +300,8 @@ h1, h2, h3, h4 {
 .subscription-text {
 	margin: 0;
 	margin-bottom: 32px;
+	font-size: 14px;
+	line-height: 21px;
 }
 .subscription-input {
 	padding: 10px 29px;
@@ -315,4 +322,95 @@ h1, h2, h3, h4 {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	cursor: pointer;
+}
+
+/*footer*/
+.main-footer {
+	padding-top: 75px;
+	color: var(--main-white);
+	background-color: var(--footer-bg-color);
+}
+.footer-logo {
+	display: block;
+	width: 176px;
+	height: 52px;
+}
+.location {
+	display: flex;
+	margin-top: 40px;
+	margin-bottom: 16px;
+	font-size: 16px;
+	line-height: 24px;
+	font-style: normal;
+}
+	.location::before {
+		content: "";
+		flex-shrink: 0;
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin-right: 16px;
+		background-image: url("../img/location.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+.tel {
+	display: flex;
+	margin-bottom: 16px;	
+}
+	.tel::before {
+		content: "";
+		flex-shrink: 0;
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin-right: 16px;
+		background-image: url("../img/phone.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+.email {
+	display: flex;
+	margin-bottom: 80px;	
+}
+	.email::before {
+		content: "";
+		flex-shrink: 0;
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin-right: 16px;
+		background-image: url("../img/mail.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+.footer-list {
+	margin: 0;
+	margin-bottom: 50px;
+	padding: 0;
+	list-style-type: none;
+}
+.footer-item:not(:last-child) {
+	margin-bottom: 16px;
+}
+.footer-link {
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--main-white);
+	text-decoration: none;
+}
+.socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
+}
+.social-link:nth-child(2) {
+	margin: 0 11px;
 }
